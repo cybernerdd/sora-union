@@ -8,7 +8,7 @@ import { IFilePayload } from '@/interfaces';
 
 export async function processCsv(sortBy?: string) {
   try {
-    const filePath = path.join(process.cwd(), 'data.csv');
+    const filePath = process.cwd() + '/data.csv'
 
     const result: IFilePayload[] = (await parseCSVFile(
       filePath
